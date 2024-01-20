@@ -68,7 +68,7 @@
     transform: rotate(-45deg) translateY(1px, 1px);
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (min-width: 1024px){
     .nav__menu{
         all: unset;
     }
@@ -76,7 +76,6 @@
     .nav__toggle{
         display: none;
     }
-
     .nav {
         position: fixed;
         inset-block: 0;
@@ -85,11 +84,11 @@
         align-items: center;
     }
 
-    .nav_item {
+    .nav__item {
         margin-block: 20px;
     }
 
-    .nav_link {
+    .nav__link {
         padding: 0;
         border-bottom: none;
         background-color: var(--container-color);
@@ -104,10 +103,10 @@
         margin-inline: auto;
     }
 
-    .nav__menu {
+    .nav__name {
         position: absolute;
         top: 0;
-        right: 100;
+        right: 0;
         background-color: var(--first-color);
         height: 100%;
         line-height: 50px;
@@ -117,6 +116,7 @@
         color: var(--text-white);
         opacity: 0;
         visibility: hidden;
+        z-index: -1;
         transition: all 0.3s ease;
         }
 
@@ -137,4 +137,4 @@
         .active-nav .nav__icon {
             color: var(--text-white);
         }
-    }
+ }

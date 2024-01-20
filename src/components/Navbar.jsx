@@ -11,9 +11,8 @@ const Navbar = () => {
       <div className={`${showMenu ? 'nav__menu show-menu' : 'nav__menu'}`}>
         <ul className="nav__list">
            {links.map(({ name, icon, path }, index) => {
-
               return (
-                <li key={index} className="nav__item">
+                <li className="nav__item key={index}">
                   <NavLink            
                     to={path}
                     className={({isActive}) => isActive ? 
